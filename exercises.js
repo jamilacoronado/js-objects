@@ -13,7 +13,15 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
     
     Console.log the object.
 */
-    
+
+var books = {
+    title: "The Obstacle is the Way",
+    author: "Ryan Holiday",
+    category: "Self Help",
+    pages: 200
+};
+
+console.log(books);
   
 /*
 2.  Declare a variable named `dog` and create the following properties (key-value pairs) to the object:
@@ -30,6 +38,17 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
  "My dog `name` is `age` year old and likes to `speak` at strangers."
 */ 
 
+var dog = {
+    name: "Tobi",
+    age: 2,
+    vegeterian: false,
+    color: ["black", "brown"],
+    speak: function(){
+        return "bark!";
+    }
+};
+
+console.log("My dog " + dog.name + " is " + dog.age + " year old and likes to " + dog.speak() + " at strangers. ");
 
 
 //An empty object
@@ -47,6 +66,16 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
   Console.log the object.
 */
 
+var kicks = {};
+kicks.brand = "nike";
+kicks.color = "cornflower blue";
+kicks.size = 6.5;
+kicks.price = 70;
+kicks.buy = function(){
+    return "Now I is a cool kid!";
+}
+
+console.log(kicks);
 
 /* 
 
@@ -59,6 +88,12 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
   console.log the object
 */
 
+var plainBox = {};
+plainBox.color = "yellow";
+plainBox.size = 12;
+plainBox.contents = []
+
+console.log(plainBox)
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -70,6 +105,16 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
 
     console.log the object
 */
+
+var stockCar = {
+    model: "Ford",
+    year: 2018,
+    automaticTransmission: true,
+    driver: null,
+    passenger: []
+};
+
+console.log(stockCar)
 
 
 /*
@@ -88,6 +133,18 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
+
+var plainPerson = {}
+function buildPerson(person, nameString, age){
+    person.name = nameString;
+    person.age = age;
+
+    return person;
+
+}
+
+var completePerson = buildPerson(plainPerson, "Liam Tobin", 31);
+console.log(completePerson);
 
 
 /*
@@ -115,7 +172,36 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
             ...
  */
 
+var arrayOfObjects = [
+    {
+        id: 0,
+        date: "Monday Jan 25 2015 2:01 PM",
+        total: "279.38"
+    },
+    {
+        id: 1,
+        date: "Monday Jan 27 2015 11:31 AM",
+        total: "79.80"
+    },
+    {
+        id: 2,
+        date: "Monday Feb 1 2015 7:56 AM",
+        total: "15.62"
+    }
+];
 
+function printOrders(orders){
+    for(var i = 0; i<orders.length; i++){
+      console.log("=====");
+      console.log("id: " + orders[i].id);
+      console.log("date: " + orders[i].date);
+      console.log("total: " + orders[i].total);
+    }
+  
+  }
+  
+  printOrders(arrayOfObjects);
+ 
 /*
 8. Addition with an object
    Declare a new variable named sumObj and set it to be a new object with the properties `a`, `b`, and `result`. 
@@ -128,6 +214,7 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
         Invoke your function and pass in your object, store the result to a variable named sumObjResult and use `console.log` 
         to inspect your results.
 */
+
 
 
 /*
